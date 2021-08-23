@@ -34,8 +34,19 @@ mvn clean package'''
     }
 
     stage('slack') {
-      steps {
-        slackSend(token: 'Z9sGHTKC0iGOYzeIdmOSZwZB', channel: 'int-project', message: 'Success!', notifyCommitters: true)
+      parallel {
+        stage('slack') {
+          steps {
+            slackSend(token: 'Z9sGHTKC0iGOYzeIdmOSZwZB', channel: 'int-project', message: 'Success!', notifyCommitters: true)
+          }
+        }
+
+        stage('chuck') {
+          steps {
+            chuckNorris()
+          }
+        }
+
       }
     }
 
