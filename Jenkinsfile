@@ -35,7 +35,7 @@ mvn clean package'''
 
     stage('slack') {
       steps {
-        slackSend(token: 'Nekcc7OjiQF7nPoS6GR65eJ2', channel: 'int-project', message: 'Success!', notifyCommitters: true)
+        slackSend(token: 'Z9sGHTKC0iGOYzeIdmOSZwZB', channel: 'int-project', message: 'Success!', notifyCommitters: true)
       }
     }
 
