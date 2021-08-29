@@ -28,7 +28,8 @@ mvn test'''
 
     stage('Increment') {
       steps {
-        sh 'mvn build-helper:parse-version versions:set -DnewVersion=0.0.1.$BUILD_ID-SNAPSHOT versions:commit'
+        sh '''cd spring-boot-package-war 
+mvn build-helper:parse-version versions:set -DnewVersion=0.0.1.$BUILD_ID-SNAPSHOT versions:commit'''
       }
     }
 
