@@ -8,6 +8,7 @@ pipeline {
   stages {
     stage('CheckOutCode') {
       steps {
+        cleanWs()
         git(url: 'https://github.com/razorbach1/spring-boot-examples.git', branch: 'raz_sol', changelog: true)
       }
     }
