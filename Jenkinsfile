@@ -43,7 +43,7 @@ mvn clean package'''
 
     stage('Slack') {
       steps {
-        slackSend(channel: 'int-project', message: 'Success!', token: 'Z9sGHTKC0iGOYzeIdmOSZwZB')
+        slackSend(channel: 'int-project', message: 'Success! Raz', token: 'Z9sGHTKC0iGOYzeIdmOSZwZB')
       }
     }
 
